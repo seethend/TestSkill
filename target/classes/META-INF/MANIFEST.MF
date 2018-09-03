@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: Seethend
+Build-Jdk: 1.8.0_161
+Implementation-Title: TestSkill
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.seeth
+Created-By: Maven Integration for Eclipse
+

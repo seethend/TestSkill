@@ -22,6 +22,7 @@ public class EmailIntentHandler implements IntentHandler {
 	@Override
 	public SpeechletResponse handleIntent(Intent intent, IntentRequest request, Session session) {
 		
+		System.out.println();
 		String username = intent.getSlot("userdata").getValue();
 		
 		String email = userService.getEmail(username);

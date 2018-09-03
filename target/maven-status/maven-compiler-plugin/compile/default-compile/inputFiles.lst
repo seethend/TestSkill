@@ -1,0 +1,16 @@
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\utils\AlexaUtils.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\handlers\builtins\FallbackIntentHandler.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\handlers\builtins\StopIntentHandler.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\services\UserService.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\handlers\builtins\NavigateHomeIntentHandler.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\config\CustomContainer.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\handlers\builtins\CancelIntentHandler.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\TestSkillApplication.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\models\User.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\config\AlexaConfig.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\repositories\UserRepository.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\controllers\UserController.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\handlers\custom\EmailIntentHandler.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\handlers\HandlerSpeechlet.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\handlers\builtins\HelpIntentHandler.java
+F:\TechM\Programs\Alexa\Eclipse-workspace\TestSkill\src\main\java\com\seeth\handlers\IntentHandler.java
