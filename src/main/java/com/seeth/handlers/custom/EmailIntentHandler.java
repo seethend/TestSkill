@@ -1,6 +1,7 @@
 package com.seeth.handlers.custom;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.amazon.speech.slu.Intent;
 import com.amazon.speech.speechlet.IntentRequest;
@@ -12,6 +13,7 @@ import com.seeth.handlers.IntentHandler;
 import com.seeth.services.UserService;
 import com.seeth.utils.AlexaUtils;
 
+@Component
 public class EmailIntentHandler implements IntentHandler {
 	
 	@Autowired
