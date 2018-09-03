@@ -21,15 +21,19 @@ public class EmailIntentHandler implements IntentHandler {
 	
 	@Override
 	public SpeechletResponse handleIntent(Intent intent, IntentRequest request, Session session) {
+		System.out.println("##################################################----------------------------------------------------------------------------------------------##################################################");
+		System.out.println("Inside EmailIntentHandler");
+		System.out.println("##################################################----------------------------------------------------------------------------------------------##################################################");
 		
-		System.out.println();
 		String username = intent.getSlot("userdata").getValue();
 		
 		String email = userService.getEmail(username);
-		
+		System.out.println("##################################################----------------------------------------------------------------------------------------------##################################################");
+		System.out.println("Email of User " + username + " is " + email);
+		System.out.println("##################################################----------------------------------------------------------------------------------------------##################################################");
 		Card card = AlexaUtils.newCard("Users Skill", "Email of User " + username + " is " + email);
 		
-		PlainTextOutputSpeech speech = AlexaUtils.newSpeech("You have canceled the current request", AlexaUtils.inConversationMode(session));
+		PlainTextOutputSpeech speech = AlexaUtils.newSpeech("Email of User " + username + " is " + email, AlexaUtils.inConversationMode(session));
 		
 		AlexaUtils.setConversationMode(session, true);
 		

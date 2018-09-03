@@ -30,6 +30,9 @@ public class HandlerSpeechlet implements SpeechletV2 {
 	@Override
 	public SpeechletResponse onLaunch(
 			SpeechletRequestEnvelope<LaunchRequest> requestEnvelope) {
+		System.out.println("##################################################----------------------------------------------------------------------------------------------##################################################");
+		System.out.println("Inside onLaunch");
+		System.out.println("##################################################----------------------------------------------------------------------------------------------##################################################");
 		PlainTextOutputSpeech outputSpeech = new PlainTextOutputSpeech();
 		outputSpeech.setText("Welcome to Users");
 		
