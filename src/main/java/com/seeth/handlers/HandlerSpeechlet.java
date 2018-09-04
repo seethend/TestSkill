@@ -30,9 +30,9 @@ public class HandlerSpeechlet implements SpeechletV2 {
 	@Override
 	public SpeechletResponse onLaunch(
 			SpeechletRequestEnvelope<LaunchRequest> requestEnvelope) {
-		System.out.println("##################################################----------------------------------------------------------------------------------------------##################################################");
+		System.out.println("##################################################");
 		System.out.println("Inside onLaunch");
-		System.out.println("##################################################----------------------------------------------------------------------------------------------##################################################");
+		System.out.println("##################################################");
 		PlainTextOutputSpeech outputSpeech = new PlainTextOutputSpeech();
 		outputSpeech.setText("Welcome to Users");
 		
@@ -75,7 +75,7 @@ public class HandlerSpeechlet implements SpeechletV2 {
 		else {
 			handlerBeanName = intentName + "Handler";
 		}
-		context = new AnnotationConfigApplicationContext("com.seeth");
+		context = new AnnotationConfigApplicationContext("com.seeth.handlers");
 		Object handlerBean = context.getBean(handlerBeanName);
 		
 		IntentHandler intentHandler = (IntentHandler) handlerBean;
