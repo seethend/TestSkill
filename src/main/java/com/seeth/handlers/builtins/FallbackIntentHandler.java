@@ -9,6 +9,7 @@ import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.ui.Card;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.seeth.handlers.IntentHandler;
+import com.seeth.services.UserService;
 import com.seeth.utils.AlexaUtils;
 
 @Component

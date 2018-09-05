@@ -3,12 +3,14 @@ package com.seeth.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.seeth.models.User;
 import com.seeth.repositories.UserRepository;
 
-@Service
+
+@Component
 public class UserService {
 	
 	@Autowired

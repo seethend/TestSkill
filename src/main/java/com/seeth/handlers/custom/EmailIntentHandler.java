@@ -26,8 +26,8 @@ public class EmailIntentHandler implements IntentHandler {
 		System.out.println("##################################################");
 		
 		String username = intent.getSlot("userdata").getValue();
-//		String email = "not found";
-		String email = userService.getEmail(username);
+		String email = "not found";
+//		String email = userService.getEmail(username);
 		System.out.println("##################################################");
 		System.out.println("Email of User " + username + " is " + email);
 		System.out.println("##################################################");

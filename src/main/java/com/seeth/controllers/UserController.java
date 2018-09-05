@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.seeth.models.User;
 import com.seeth.services.UserService;
 
+
 @RestController
 public class UserController {
 	

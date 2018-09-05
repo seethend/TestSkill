@@ -1,5 +1,6 @@
 package com.seeth.handlers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
@@ -14,12 +15,14 @@ import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.speechlet.SpeechletV2;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.amazon.speech.ui.Reprompt;
+import com.seeth.controllers.UserController;
+import com.seeth.repositories.UserRepository;
+import com.seeth.services.UserService;
 
 @Component
 public class HandlerSpeechlet implements SpeechletV2 {
 	
 	private AnnotationConfigApplicationContext context;
-
 
 	@Override
 	public void onSessionStarted(
@@ -46,7 +49,6 @@ public class HandlerSpeechlet implements SpeechletV2 {
 	@Override
 	public SpeechletResponse onIntent(
 			SpeechletRequestEnvelope<IntentRequest> requestEnvelope) {
-		
 		IntentRequest request = requestEnvelope.getRequest();
 		
 		Intent intent = request.getIntent();

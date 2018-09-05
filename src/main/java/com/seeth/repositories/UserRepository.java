@@ -3,6 +3,7 @@ package com.seeth.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.seeth.models.User;
+
 import java.lang.String;
 import java.util.List;
 
