@@ -9,7 +9,6 @@ import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.ui.Card;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.seeth.handlers.IntentHandler;
-import com.seeth.services.UserService;
 import com.seeth.utils.AlexaUtils;
 
 @Component
@@ -20,9 +19,9 @@ public class CancelIntentHandler implements IntentHandler {
 
 		Card card = AlexaUtils.newCard("Users Skill", "You have canceled the current request");
 		
-		PlainTextOutputSpeech speech = AlexaUtils.newSpeech("You have canceled the current request", AlexaUtils.inConversationMode(session));
-		
 		AlexaUtils.setConversationMode(session, true);
+		
+		PlainTextOutputSpeech speech = AlexaUtils.newSpeech("You have canceled the current request", AlexaUtils.inConversationMode(session));
 		
 		return AlexaUtils.newSpeechletResponse( card, speech, session, false);
 	}

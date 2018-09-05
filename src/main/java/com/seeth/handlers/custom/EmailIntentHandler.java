@@ -26,16 +26,18 @@ public class EmailIntentHandler implements IntentHandler {
 		System.out.println("##################################################");
 		
 		String username = intent.getSlot("userdata").getValue();
-		String email = "not found";
-//		String email = userService.getEmail(username);
+		
+		String email = userService.getEmail(username);
+		
 		System.out.println("##################################################");
 		System.out.println("Email of User " + username + " is " + email);
 		System.out.println("##################################################");
+		
 		Card card = AlexaUtils.newCard("Users Skill", "Email of User " + username + " is " + email);
+
+		AlexaUtils.setConversationMode(session, true);
 		
 		PlainTextOutputSpeech speech = AlexaUtils.newSpeech("Email of User " + username + " is " + email, AlexaUtils.inConversationMode(session));
-		
-		AlexaUtils.setConversationMode(session, true);
 		
 		return AlexaUtils.newSpeechletResponse( card, speech, session, false);
 	}

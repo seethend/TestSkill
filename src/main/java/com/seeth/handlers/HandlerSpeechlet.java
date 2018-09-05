@@ -1,8 +1,8 @@
 package com.seeth.handlers;
 
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.amazon.speech.json.SpeechletRequestEnvelope;
 import com.amazon.speech.slu.Intent;
@@ -15,14 +15,13 @@ import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.speechlet.SpeechletV2;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.amazon.speech.ui.Reprompt;
-import com.seeth.controllers.UserController;
-import com.seeth.repositories.UserRepository;
-import com.seeth.services.UserService;
 
-@Component
+@Service
 public class HandlerSpeechlet implements SpeechletV2 {
 	
-	private AnnotationConfigApplicationContext context;
+	@Autowired
+	BeanFactory beanFactory;
+	
 
 	@Override
 	public void onSessionStarted(
@@ -77,8 +76,8 @@ public class HandlerSpeechlet implements SpeechletV2 {
 		else {
 			handlerBeanName = intentName + "Handler";
 		}
-		context = new AnnotationConfigApplicationContext("com.seeth.handlers");
-		Object handlerBean = context.getBean(handlerBeanName);
+		
+		Object handlerBean = beanFactory.getBean(handlerBeanName);
 		
 		IntentHandler intentHandler = (IntentHandler) handlerBean;
 		

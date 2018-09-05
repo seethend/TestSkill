@@ -1,8 +1,10 @@
 Manifest-Version: 1.0
-Built-By: ds00543754
-Build-Jdk: 1.8.0_161
 Implementation-Title: TestSkill
 Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Seethend
 Implementation-Vendor-Id: com.seeth
+Build-Jdk: 1.8.0_161
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/TestSkill
 Created-By: Maven Integration for Eclipse
 

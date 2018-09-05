@@ -9,7 +9,6 @@ import com.amazon.speech.speechlet.SpeechletResponse;
 import com.amazon.speech.ui.Card;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.seeth.handlers.IntentHandler;
-import com.seeth.services.UserService;
 import com.seeth.utils.AlexaUtils;
 
 @Component
@@ -19,6 +18,8 @@ public class StopIntentHandler implements IntentHandler {
 	public SpeechletResponse handleIntent(Intent intent, IntentRequest request, Session session) {
 		
 		Card card = AlexaUtils.newCard("Alexa Demo Skill", "Conversation Ended...Byee!!!");
+		
+		AlexaUtils.setConversationMode(session, false);
 		
 		PlainTextOutputSpeech speech = AlexaUtils.newSpeech("Ok... Bye!!!", AlexaUtils.inConversationMode(session));
 		
