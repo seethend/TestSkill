@@ -1,7 +1,10 @@
 package com.seeth.handlers;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Service;
 
 import com.amazon.speech.json.SpeechletRequestEnvelope;
@@ -22,6 +25,8 @@ public class HandlerSpeechlet implements SpeechletV2 {
 	@Autowired
 	BeanFactory beanFactory;
 	
+//	private AnnotationConfigApplicationContext context;
+
 
 	@Override
 	public void onSessionStarted(
@@ -78,6 +83,10 @@ public class HandlerSpeechlet implements SpeechletV2 {
 		}
 		
 		Object handlerBean = beanFactory.getBean(handlerBeanName);
+		
+//		context = new AnnotationConfigApplicationContext("com.seeth");
+		
+//		Object handlerBean = context.getBean(handlerBeanName);
 		
 		IntentHandler intentHandler = (IntentHandler) handlerBean;
 		
